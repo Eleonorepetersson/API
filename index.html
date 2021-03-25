@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,33 +8,254 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b83eebf176.js" crossorigin="anonymous"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
-<link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
 </head>
+
 <body>
-    <header id="header">
-        I'm a Foodie
+
+     <!-- Navbar===== -->
+     <div id="menu" class="menu">
+        <div id="menu-bar" onclick="onClickMenu()">
+        <div id="bar1" class="bar"></div>
+        <div id="bar2" class="bar"></div>
+        <div id="bar3" class="bar"></div>
+        <ul id="nav" class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    </div>
+    <!-- End of Nav bar -->
+    <!-- Header======= -->
+    <header class="header">
+        <div class="hero">
+            <h1 class="title">I'm a Foodie</h1>
+            <a href="#" class="hero-button pulsate">I'm hungry</a>
+        </div>
     </header>
-    
-<div id='map' style='width: 400px; height: 300px;'></div>
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoibG9sYTQyIiwiYSI6ImNrbWFjbjRnazFwZ2kycHF0amxucGRvencifQ.LjeZwGXQvLiGqkW0oiGBYA';
-var map = new mapboxgl.Map({
-    container: 'map', // container ID
-    style: 'mapbox://styles/mapbox/streets-v11', // style URL
-    center: [-74.5, 40], // starting position [lng, lat]
-    zoom: 9 // starting zoom
-});
-</script>
+    <!-- end of header -->
 
-<!-- end of map -->
-<button id="button_search">Search</button>
-<div id="cardList"></div>
+    <!-- about us -->
+    <section id="about">
+        <div>
+            <h2 class="title-text">What do you want to eat</h2>
+        </div>
+        <div class="about-center">
+            <!-- start of article-->
+            <article class="about">
+                <div class="about-icon">
+                    <i class="fas fa-mug-hot"></i>
+                </div>
+                <div class="about-text">
+                    <h2 class="about-subtitle">Drinks</h2>
+                    <p class="about-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis nostrum totam
+                    </p>
+                </div>
+            </article>
+            <!-- end of article -->
+            <!-- start of article-->
+            <article class="about">
+                <div class="about-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="about-text">
+                    <h2 class="about-subtitle">Healthy food</h2>
+                    <p class="about-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis nostrum totam
+                    </p>
+                </div>
+            </article>
+            <!-- end of article -->
+            <!-- start of article-->
+            <article class="about">
+                <div class="about-icon">
+                    <i class="fas fa-mortar-pestle"></i>
+                </div>
+                <div class="about-text">
+                    <h2 class="about-subtitle">Organic Food</h2>
+                    <p class="about-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis nostrum totam
+                    </p>
+                </div>
+            </article>
+            <!-- end of article -->
+            <!-- start of article-->
+            <article class="about">
+                <div class="about-icon">
+                    <i class="fas fa-drumstick-bite"></i>
+                </div>
+                <div class="about-text">
+                    <h2 class="about-subtitle">Fast Food</h2>
+                    <p class="about-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis nostrum totam
+                    </p>
+                </div>
+            </article>
+            <!-- end of article -->
+            <!-- start of article-->
+            <article class="about">
+                <div class="about-icon">
+                    <i class="fas fa-fish"></i>
+                </div>
+                <div class="about-text">
+                    <h2 class="about-subtitle">Seafood</h2>
+                    <p class="about-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis nostrum totam
+                    </p>
+                </div>
+            </article>
+            <!-- end of article -->
+            <!-- start of article-->
+            <article class="about">
+                <div class="about-icon">
+                    <i class="fas fa-pepper-hot"></i>
+                </div>
+                <div class="about-text">
+                    <h2 class="about-subtitle">Spicy</h2>
+                    <p class="about-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis nostrum totam
+                    </p>
+                </div>
+            </article>
+            <!-- end of article -->
+        </div>
+    </section>
+    <!-- end of about us -->
+    <!-- Menu section -->
+    <section class="menu" id="menu">
+        <article class="menu-image"></article>
+        <article class="menu-text">
+            <div class="menu-text-center">
+                <h1>Our Services</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum obcaecati omnis amet sequi
+                    accusantium, laborum aspernatur quam laudantium. Temporibus, neque.</p>
+                <a href="#">Explore</a>
+            </div>
+        </article>
+    </section>
+    <!-- end of menu section -->
+    <!-- social icons -->
+    <section id="social-icons">
+        <a href="#"><i class="fab fa-facebook facebook"></i> </a>
+        <a href="#"><i class="fab fa-twitter twitter"></i> </a>
+        <a href="#"><i class="fab fa-instagram instagram"></i> </a>
+        <a href="#"><i class="fab fa-google-plus plus"></i> </a>
+
+    </section>
+
+    <!-- end of social icons -->
+    <!-- Numbers -->
+    <section id="numbers">
+        <article class="number">
+            <i class="fas fa-cloud-meatball"></i>
+            <p>50</p>
+            <h3>Meat Dishes</h3>
+        </article>
+
+        <article class="number">
+            <i class="fas fa-cheese"></i>
+            <p>35</p>
+            <h3>Cheese Dishes</h3>
+        </article>
+
+        <article class="number">
+            <i class="fas fa-pizza-slice"></i>
+            <p>25</p>
+            <h3>Pizza</h3>
+        </article>
+
+        <article class="number">
+            <i class="fas fa-ice-cream"></i>
+            <p>50</p>
+            <h3>Desserts</h3>
+        </article>
 
 
-    <script src="map.js"></script>
-    <script src="https.js"></script>
-</body>
+    </section>
+
+    <!-- end of numbers -->
+    <!-- Card section -->
+    <section id="food">
+        <div>
+            <h2 class="title-text">I'm a Foodie</h2>
+        </div>
+        <div class="food-container">
+            <!-- article -->
+            <article class="food-card">
+                <img src="image/salad.jpg" class="food-img" alt="">
+                <div class="img-text">
+                    <h1>Vegan</h1>
+                </div>
+                <div class="img-footer">
+                    <div class="footer-icon">
+                        <i class="fas fa-dollar-sign">25</i>
+                    </div>
+                    <div class="footer-btn">
+                        <button type="button" class="food-btn">Order Now</button>
+                    </div>
+                </div>
+            </article>
+            <!-- end of article -->
+             <!-- article -->
+             <article class="food-card">
+                <img src="image/pizza.jpg" class="food-img" alt="">
+                <div class="img-text">
+                    <h1>Pizza</h1>
+                </div>
+                <div class="img-footer">
+                    <div class="footer-icon">
+                        <i class="fas fa-dollar-sign">35</i>
+                    </div>
+                    <div class="footer-btn">
+                        <button type="button" class="food-btn">Order Now</button>
+                    </div>
+                </div>
+            </article>
+            <!-- end of article -->
+             <!-- article -->
+             <article class="food-card">
+                <img src="image/pexels-valeria-boltneva-1148087.jpg" class="food-img" alt="">
+                <div class="img-text">
+                    <h1>Sushi</h1>
+                </div>
+                <div class="img-footer">
+                    <div class="footer-icon">
+                        <i class="fas fa-dollar-sign">45</i>
+                    </div>
+                    <div class="footer-btn">
+                        <button type="button" class="food-btn">Order Now</button>
+                    </div>
+                </div>
+            </article>
+            <!-- end of article -->
+         
+        </div>
+    </section>
+ <!-- end of card section -->
+
+
+        <div id='map' style='width: 400px; height: 300px;'></div>
+
+
+        <!-- end of map -->
+        <button id="button_search">Search</button>
+        <div id="cardList"></div>
+
+
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="section-center">
+                <p class="footer-text">
+                    &copy; <span>I'm a Foodie</span>
+                </p>
+            </div>
+        </footer>
+        <!-- end of footer -->
+
+        <script src="map.js"></script>
+
+    </body>
+
 </html>
